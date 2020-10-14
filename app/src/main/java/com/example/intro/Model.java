@@ -16,6 +16,10 @@ public class Model {
         this.animation2 = animation2;
     }
 
+    public void setImg1(int img1) {
+        this.img1 = img1;
+    }
+
     public Animation getAnimation1() {
         return animation1;
     }
