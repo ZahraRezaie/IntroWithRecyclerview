@@ -18,7 +18,6 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder>{
 
     private Context context;
     private List<Model> models;
-    private Animation animation , animation2;
 
 
     public MyAdapter(Context context, List<Model> models) {
@@ -31,7 +30,6 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder>{
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
         View view = LayoutInflater.from(context).inflate(R.layout.slider_item, parent, false);
-
         return new MyViewHolder(view);
     }
 

@@ -28,12 +28,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         models= new ArrayList<>();
         ViewPager viewPager = findViewById(R.id.intro_view_pager);
         TabLayout indicator = findViewById(R.id.indicator);
         recyclerView = findViewById(R.id.slider_pager);
-        recyclerView.setHasFixedSize(true);
-        recyclerView.setLongClickable(true);
 
         setUpRecyclerView();
 
@@ -109,11 +108,5 @@ public class MainActivity extends AppCompatActivity {
         public void destroyItem(ViewGroup container, int position, @NonNull Object object) {
             container.removeView((View) object);
         }
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        models.clear();
     }
 }
